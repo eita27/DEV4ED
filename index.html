@@ -4,228 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DEV4ED | Quality Education for All</title>
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --primary: #0f766e;
-      --primary-dark: #115e59;
-      --secondary: #0ea5e9;
-      --text: #0f172a;
-      --muted: #475569;
-      --border: #dbeafe;
-      --card-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.55;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      background: linear-gradient(120deg, #0f766e, #0ea5e9);
-      color: #fff;
-      padding: 22px 0;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      box-shadow: 0 6px 14px rgba(15, 118, 110, 0.3);
-    }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      font-size: 1.25rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: #ecfeff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .hero {
-      background: linear-gradient(160deg, #0f766e 0%, #0ea5e9 100%);
-      color: #f8fafc;
-      padding: 72px 0 64px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      line-height: 1.15;
-    }
-
-    .hero p {
-      margin: 16px auto 0;
-      max-width: 850px;
-      font-size: 1.05rem;
-    }
-
-    .quote {
-      margin-top: 24px;
-      padding: 14px 18px;
-      border-left: 4px solid #cffafe;
-      background: rgba(15, 23, 42, 0.2);
-      display: inline-block;
-      text-align: left;
-      border-radius: 8px;
-    }
-
-    section {
-      padding: 52px 0;
-    }
-
-    .section-title {
-      margin: 0 0 12px;
-      font-size: 1.9rem;
-      color: #0f172a;
-    }
-
-    .section-intro {
-      margin: 0 0 26px;
-      color: var(--muted);
-      max-width: 900px;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px;
-      box-shadow: var(--card-shadow);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: var(--primary-dark);
-      font-size: 1.08rem;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-    }
-
-    ul {
-      margin: 8px 0 0;
-      padding-left: 20px;
-    }
-
-    li { margin-bottom: 7px; }
-
-    .highlight {
-      background: #ecfeff;
-      border: 1px solid #a5f3fc;
-      border-radius: 12px;
-      padding: 18px;
-    }
-
-    .faq-item {
-      background: #fff;
-      border: 1px solid #dbeafe;
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-bottom: 12px;
-    }
-
-    .faq-item h4 {
-      margin: 0 0 6px;
-      color: #0f766e;
-    }
-
-    .cta {
-      background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
-      color: #eff6ff;
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 10px 28px rgba(30, 58, 138, 0.28);
-    }
-
-    .cta h2 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.9rem;
-    }
-
-    .cta p {
-      margin: 0 0 14px;
-      color: #dbeafe;
-      max-width: 900px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 11px 16px;
-      border-radius: 8px;
-      background: #22d3ee;
-      color: #082f49;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .btn:hover { background: #67e8f9; }
-
-    footer {
-      text-align: center;
-      padding: 18px 0 26px;
-      color: #475569;
-      font-size: 0.95rem;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body data-page="home">
   <header>
     <div class="container nav">
-      <div class="brand">DEV4ED</div>
+      <a class="brand" href="index.html">DEV4ED</a>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#programs">Programs</a>
         <a href="#materials">Learning Materials</a>
         <a href="#faq">FAQ</a>
-        <a href="#join">Join</a>
       </nav>
     </div>
   </header>
@@ -294,26 +83,32 @@
   <section id="programs">
     <div class="container">
       <h2 class="section-title">Our Programs</h2>
+      <p class="section-intro">Click a program to view its dedicated page with full details and offerings.</p>
       <div class="card-grid">
-        <article class="card">
-          <h3>Digital Learning</h3>
+        <article class="card clickable" data-program="digital-learning">
+          <h3>💻 Digital Learning</h3>
           <p>Access online lessons, videos, e-books, and interactive learning materials anytime and anywhere.</p>
+          <span class="card-link-hint">View program →</span>
         </article>
-        <article class="card">
-          <h3>Scholarship Assistance</h3>
+        <article class="card clickable" data-program="scholarship-assistance">
+          <h3>🎓 Scholarship Assistance</h3>
           <p>Discover scholarships, financial aid, and educational grants to support academic goals.</p>
+          <span class="card-link-hint">View program →</span>
         </article>
-        <article class="card">
-          <h3>Skills Development</h3>
+        <article class="card clickable" data-program="skills-development">
+          <h3>🛠️ Skills Development</h3>
           <p>Join workshops and training in leadership, communication, programming, and entrepreneurship.</p>
+          <span class="card-link-hint">View program →</span>
         </article>
-        <article class="card">
-          <h3>Community Outreach</h3>
+        <article class="card clickable" data-program="community-outreach">
+          <h3>🤝 Community Outreach</h3>
           <p>Participate in literacy campaigns, tutoring, and donation drives for underserved communities.</p>
+          <span class="card-link-hint">View program →</span>
         </article>
-        <article class="card">
-          <h3>Career Development</h3>
+        <article class="card clickable" data-program="career-development">
+          <h3>💼 Career Development</h3>
           <p>Receive counseling, resume support, interview preparation, and professional guidance.</p>
+          <span class="card-link-hint">View program →</span>
         </article>
       </div>
     </div>
@@ -360,11 +155,11 @@
     <div class="container">
       <h2 class="section-title">📚 Learning Materials</h2>
       <p class="section-intro">
-        Explore educational resources designed to support learners of all ages and strengthen practical skills.
+        Click any category to open its dedicated learning page with detailed resources.
       </p>
 
       <div class="card-grid">
-        <article class="card">
+        <article class="card clickable" data-learning="ebooks">
           <h3>📖 E-Books</h3>
           <ul>
             <li>Mathematics Fundamentals</li>
@@ -374,9 +169,10 @@
             <li>Computer Fundamentals</li>
             <li>Financial Literacy</li>
           </ul>
+          <span class="card-link-hint">Open learning page →</span>
         </article>
 
-        <article class="card">
+        <article class="card clickable" data-learning="video-lessons">
           <h3>🎥 Video Lessons</h3>
           <ul>
             <li>Mathematics Tutorials</li>
@@ -385,9 +181,10 @@
             <li>Programming Basics (HTML, CSS, Java, Python)</li>
             <li>Study Techniques and Time Management</li>
           </ul>
+          <span class="card-link-hint">Open learning page →</span>
         </article>
 
-        <article class="card">
+        <article class="card clickable" data-learning="practice-exercises">
           <h3>📝 Practice Exercises</h3>
           <ul>
             <li>Interactive Quizzes</li>
@@ -396,9 +193,10 @@
             <li>Reading Comprehension Activities</li>
             <li>Coding Challenges</li>
           </ul>
+          <span class="card-link-hint">Open learning page →</span>
         </article>
 
-        <article class="card">
+        <article class="card clickable" data-learning="digital-resources">
           <h3>💻 Digital Resources</h3>
           <ul>
             <li>Online Class Modules</li>
@@ -407,11 +205,12 @@
             <li>Downloadable PDF Notes</li>
             <li>Interactive Learning Activities</li>
           </ul>
+          <span class="card-link-hint">Open learning page →</span>
         </article>
       </div>
 
       <div class="two-col" style="margin-top: 18px;">
-        <div class="card">
+        <article class="card clickable" data-learning="recommended-subjects">
           <h3>📚 Recommended Subjects</h3>
           <ul>
             <li>Mathematics</li>
@@ -421,8 +220,9 @@
             <li>Social Studies</li>
             <li>Information and Communications Technology (ICT)</li>
           </ul>
-        </div>
-        <div class="card">
+          <span class="card-link-hint">Open learning page →</span>
+        </article>
+        <article class="card clickable" data-learning="learning-objectives">
           <h3>🎯 Learning Objectives</h3>
           <ul>
             <li>Improve academic performance.</li>
@@ -431,11 +231,12 @@
             <li>Enhance communication and collaboration.</li>
             <li>Prepare for higher education and future careers.</li>
           </ul>
-        </div>
+          <span class="card-link-hint">Open learning page →</span>
+        </article>
       </div>
 
       <div class="two-col" style="margin-top: 18px;">
-        <div class="card">
+        <article class="card clickable" data-learning="featured-resources">
           <h3>🌟 Featured Resources</h3>
           <ul>
             <li>Beginner's Guide to Computer Programming</li>
@@ -445,8 +246,9 @@
             <li>Career Readiness Guide</li>
             <li>Basic Financial Literacy</li>
           </ul>
-        </div>
-        <div class="card">
+          <span class="card-link-hint">Open learning page →</span>
+        </article>
+        <article class="card clickable" data-learning="download-center">
           <h3>📥 Download Center</h3>
           <ul>
             <li>PDF Learning Modules</li>
@@ -456,7 +258,8 @@
             <li>Activity Sheets</li>
             <li>Study Guides</li>
           </ul>
-        </div>
+          <span class="card-link-hint">Open learning page →</span>
+        </article>
       </div>
     </div>
   </section>
@@ -498,5 +301,8 @@
       © 2026 DEV4ED | Sustainable Development Goal 4: Quality Education
     </div>
   </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
