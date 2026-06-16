@@ -10,6 +10,36 @@ function getQueryParam(name) {
   return new URLSearchParams(window.location.search).get(name);
 }
 
+function buildImageTag(src, alt, className) {
+  return `<img src="${src}" alt="${alt}" class="${className}" loading="lazy">`;
+}
+
+function buildDetailHero(item) {
+  return `
+    <section class="detail-hero">
+      <img src="${item.image}" alt="${item.title}" class="detail-hero-bg" loading="lazy">
+      <div class="detail-hero-content container">
+        <div class="detail-hero-icon">${item.icon}</div>
+        <h1>${item.title}</h1>
+        <p>${item.description}</p>
+      </div>
+    </section>
+  `;
+}
+
+function injectCardImages(selector, dataMap, dataKey) {
+  document.querySelectorAll(selector).forEach((card) => {
+    const item = dataMap[card.dataset[dataKey]];
+    if (!item?.image) return;
+
+    card.classList.add("has-image");
+    card.insertAdjacentHTML(
+      "afterbegin",
+      buildImageTag(item.image, item.title, "card-image")
+    );
+  });
+}
+
 function renderProgramPage() {
   const root = document.getElementById("detail-root");
   if (!root) return;
@@ -35,6 +65,7 @@ function renderProgramPage() {
     .map(
       (item) => `
         <article class="subprogram-card">
+          <img src="${program.image}" alt="${item.name}" class="subprogram-image" loading="lazy">
           <h3>${item.name}</h3>
           <p>${item.description}</p>
         </article>
@@ -43,16 +74,12 @@ function renderProgramPage() {
     .join("");
 
   root.innerHTML = `
-    <div class="breadcrumb">
-      <a href="index.html">Home</a> / <a href="index.html#programs">Programs</a> / ${program.title}
-    </div>
-    <section class="hero compact">
-      <div class="container">
-        <div class="detail-hero-icon">${program.icon}</div>
-        <h1>${program.title}</h1>
-        <p>${program.description}</p>
+    <div class="container breadcrumb-wrap">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="index.html#programs">Programs</a> / ${program.title}
       </div>
-    </section>
+    </div>
+    ${buildDetailHero(program)}
     <section>
       <div class="container">
         <h2 class="section-title">Program Offerings</h2>
@@ -89,7 +116,7 @@ function renderLearningPage() {
     .map(
       (item) => `
         <article class="material-item">
-          <div class="icon">${category.icon}</div>
+          <img src="${category.image}" alt="${item.name}" class="material-thumb" loading="lazy">
           <div>
             <h3>${item.name}</h3>
             <p>${item.description}</p>
@@ -100,16 +127,12 @@ function renderLearningPage() {
     .join("");
 
   root.innerHTML = `
-    <div class="breadcrumb">
-      <a href="index.html">Home</a> / <a href="index.html#materials">Learning Materials</a> / ${category.title}
-    </div>
-    <section class="hero compact">
-      <div class="container">
-        <div class="detail-hero-icon">${category.icon}</div>
-        <h1>${category.title}</h1>
-        <p>${category.description}</p>
+    <div class="container breadcrumb-wrap">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="index.html#materials">Learning Materials</a> / ${category.title}
       </div>
-    </section>
+    </div>
+    ${buildDetailHero(category)}
     <section>
       <div class="container">
         <h2 class="section-title">Available Materials</h2>
@@ -122,6 +145,9 @@ function renderLearningPage() {
 }
 
 function initHomePage() {
+  injectCardImages("[data-program]", PROGRAMS, "program");
+  injectCardImages("[data-learning]", LEARNING_CATEGORIES, "learning");
+
   document.querySelectorAll("[data-program]").forEach((card) => {
     const programId = card.dataset.program;
     card.setAttribute("role", "button");
