@@ -3,7 +3,7 @@ const PROGRAMS = {
     id: "digital-learning",
     title: "Digital Learning",
     icon: "💻",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop",
+    image: "images/digital-learning.jpg",
     summary: "Access online lessons, videos, e-books, and interactive learning materials anytime and anywhere.",
     description:
       "Our Digital Learning program brings quality education to learners through flexible online platforms. Students can study at their own pace, revisit lessons, and build digital skills needed for modern classrooms and careers.",
@@ -34,7 +34,7 @@ const PROGRAMS = {
     id: "scholarship-assistance",
     title: "Scholarship Assistance",
     icon: "🎓",
-    image: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=800&h=500&fit=crop",
+    image: "images/scholarship-assistance.jpg",
     summary: "Discover scholarships, financial aid, and educational grants to support academic goals.",
     description:
       "We help students find and apply for scholarships and financial aid opportunities. Our team guides learners through requirements, deadlines, and application preparation so more students can continue their education.",
@@ -61,7 +61,7 @@ const PROGRAMS = {
     id: "skills-development",
     title: "Skills Development",
     icon: "🛠️",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=500&fit=crop",
+    image: "images/skills-development.jpg",
     summary: "Join workshops and training in leadership, communication, programming, and entrepreneurship.",
     description:
       "Skills Development workshops prepare learners for real-world challenges through hands-on training. Participants build confidence, teamwork, and job-ready abilities through practical activities and mentorship.",
@@ -92,7 +92,7 @@ const PROGRAMS = {
     id: "community-outreach",
     title: "Community Outreach",
     icon: "🤝",
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=500&fit=crop",
+    image: "images/community-outreach.jpg",
     summary: "Participate in literacy campaigns, tutoring, and donation drives for underserved communities.",
     description:
       "Community Outreach connects volunteers, educators, and learners to bring education where it is needed most. Programs focus on literacy, tutoring, and resource sharing to support underserved areas.",
@@ -119,7 +119,7 @@ const PROGRAMS = {
     id: "career-development",
     title: "Career Development",
     icon: "💼",
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=500&fit=crop",
+    image: "images/career-development.jpg",
     summary: "Receive counseling, resume support, interview preparation, and professional guidance.",
     description:
       "Career Development helps learners plan their future with practical guidance on career paths, job applications, and professional growth. Students and graduates receive tools to transition from education to employment.",
@@ -153,7 +153,7 @@ const LEARNING_CATEGORIES = {
     id: "ebooks",
     title: "E-Books",
     icon: "📖",
-    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=500&fit=crop",
+    image: "images/ebooks.jpg",
     summary: "Digital books covering core academic subjects and practical life skills.",
     description:
       "Browse our e-book collection designed for self-paced learning. Each title includes clear explanations, examples, and review sections to help learners master key concepts.",
@@ -170,7 +170,7 @@ const LEARNING_CATEGORIES = {
     id: "video-lessons",
     title: "Video Lessons",
     icon: "🎥",
-    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=500&fit=crop",
+    image: "images/video-lessons.jpg",
     summary: "Watch guided tutorials and demonstrations across academic and technical subjects.",
     description:
       "Video lessons make complex topics easier to understand through visual demonstrations, step-by-step explanations, and instructor-led examples you can replay anytime.",
@@ -186,7 +186,7 @@ const LEARNING_CATEGORIES = {
     id: "practice-exercises",
     title: "Practice Exercises",
     icon: "📝",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=500&fit=crop",
+    image: "images/practice-exercises.jpg",
     summary: "Interactive activities to test knowledge and strengthen learning through repetition.",
     description:
       "Practice exercises help learners apply what they have studied. Use quizzes, worksheets, and challenges to identify strengths and areas for improvement.",
@@ -202,7 +202,7 @@ const LEARNING_CATEGORIES = {
     id: "digital-resources",
     title: "Digital Learning Resources",
     icon: "💻",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop",
+    image: "images/digital-resources.jpg",
     summary: "Online modules, slides, infographics, and interactive tools for modern learners.",
     description:
       "Digital resources support blended and remote learning with downloadable content, visual aids, and interactive activities suitable for classrooms and independent study.",
@@ -218,7 +218,7 @@ const LEARNING_CATEGORIES = {
     id: "recommended-subjects",
     title: "Recommended Subjects",
     icon: "📚",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=500&fit=crop",
+    image: "images/recommended-subjects.jpg",
     summary: "Core subject areas aligned with quality education and national learning standards.",
     description:
       "These recommended subjects form a balanced academic foundation. Each area includes resources for different grade levels and learning goals.",
@@ -235,7 +235,7 @@ const LEARNING_CATEGORIES = {
     id: "learning-objectives",
     title: "Learning Objectives",
     icon: "🎯",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
+    image: "images/learning-objectives.jpg",
     summary: "Goals learners should achieve after using DEV4ED materials and programs.",
     description:
       "Our learning objectives guide curriculum design and help learners track progress. Each objective supports academic growth, digital readiness, and lifelong learning.",
@@ -251,7 +251,7 @@ const LEARNING_CATEGORIES = {
     id: "featured-resources",
     title: "Featured Resources",
     icon: "🌟",
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=500&fit=crop",
+    image: "images/featured-resources.jpg",
     summary: "Highlighted guides and modules selected for their impact on learner success.",
     description:
       "Featured resources are popular starting points for new learners. Each guide is practical, accessible, and designed to deliver immediate value.",
@@ -268,7 +268,7 @@ const LEARNING_CATEGORIES = {
     id: "download-center",
     title: "Download Center",
     icon: "📥",
-    image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=800&h=500&fit=crop",
+    image: "images/download-center.jpg",
     summary: "Free downloadable modules, worksheets, tests, and study guides.",
     description:
       "The Download Center provides printable and offline-friendly resources for teachers, students, and parents. All materials support independent study and classroom instruction.",
