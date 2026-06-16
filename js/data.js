@@ -34,7 +34,7 @@ const PROGRAMS = {
     id: "scholarship-assistance",
     title: "Scholarship Assistance",
     icon: "🎓",
-    image: "images/scholarship-assistance.jpg",
+    image: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=800&h=500&fit=crop",
     summary: "Discover scholarships, financial aid, and educational grants to support academic goals.",
     description:
       "We help students find and apply for scholarships and financial aid opportunities. Our team guides learners through requirements, deadlines, and application preparation so more students can continue their education.",
@@ -92,7 +92,7 @@ const PROGRAMS = {
     id: "community-outreach",
     title: "Community Outreach",
     icon: "🤝",
-    image: "images/community-outreach.jpg",
+    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&h=500&fit=crop",
     summary: "Participate in literacy campaigns, tutoring, and donation drives for underserved communities.",
     description:
       "Community Outreach connects volunteers, educators, and learners to bring education where it is needed most. Programs focus on literacy, tutoring, and resource sharing to support underserved areas.",
@@ -119,7 +119,7 @@ const PROGRAMS = {
     id: "career-development",
     title: "Career Development",
     icon: "💼",
-    image: "images/career-development.jpg",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=500&fit=crop",
     summary: "Receive counseling, resume support, interview preparation, and professional guidance.",
     description:
       "Career Development helps learners plan their future with practical guidance on career paths, job applications, and professional growth. Students and graduates receive tools to transition from education to employment.",
@@ -153,7 +153,7 @@ const LEARNING_CATEGORIES = {
     id: "ebooks",
     title: "E-Books",
     icon: "📖",
-    image: "images/ebooks.jpg",
+    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&h=500&fit=crop",
     summary: "Digital books covering core academic subjects and practical life skills.",
     description:
       "Browse our e-book collection designed for self-paced learning. Each title includes clear explanations, examples, and review sections to help learners master key concepts.",
@@ -170,7 +170,7 @@ const LEARNING_CATEGORIES = {
     id: "video-lessons",
     title: "Video Lessons",
     icon: "🎥",
-    image: "images/video-lessons.jpg",
+    image: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=500&fit=crop",
     summary: "Watch guided tutorials and demonstrations across academic and technical subjects.",
     description:
       "Video lessons make complex topics easier to understand through visual demonstrations, step-by-step explanations, and instructor-led examples you can replay anytime.",
@@ -218,7 +218,7 @@ const LEARNING_CATEGORIES = {
     id: "recommended-subjects",
     title: "Recommended Subjects",
     icon: "📚",
-    image: "images/recommended-subjects.jpg",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=500&fit=crop",
     summary: "Core subject areas aligned with quality education and national learning standards.",
     description:
       "These recommended subjects form a balanced academic foundation. Each area includes resources for different grade levels and learning goals.",
@@ -235,7 +235,7 @@ const LEARNING_CATEGORIES = {
     id: "learning-objectives",
     title: "Learning Objectives",
     icon: "🎯",
-    image: "images/learning-objectives.jpg",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop",
     summary: "Goals learners should achieve after using DEV4ED materials and programs.",
     description:
       "Our learning objectives guide curriculum design and help learners track progress. Each objective supports academic growth, digital readiness, and lifelong learning.",
@@ -268,7 +268,7 @@ const LEARNING_CATEGORIES = {
     id: "download-center",
     title: "Download Center",
     icon: "📥",
-    image: "images/download-center.jpg",
+    image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=800&h=500&fit=crop",
     summary: "Free downloadable modules, worksheets, tests, and study guides.",
     description:
       "The Download Center provides printable and offline-friendly resources for teachers, students, and parents. All materials support independent study and classroom instruction.",
