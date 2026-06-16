@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEV4ED | Quality Education for All</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --secondary: #0ea5e9;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #dbeafe;
+      --card-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: linear-gradient(120deg, #0f766e, #0ea5e9);
+      color: #fff;
+      padding: 22px 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 6px 14px rgba(15, 118, 110, 0.3);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      font-size: 1.25rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #ecfeff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .hero {
+      background: linear-gradient(160deg, #0f766e 0%, #0ea5e9 100%);
+      color: #f8fafc;
+      padding: 72px 0 64px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      margin: 16px auto 0;
+      max-width: 850px;
+      font-size: 1.05rem;
+    }
+
+    .quote {
+      margin-top: 24px;
+      padding: 14px 18px;
+      border-left: 4px solid #cffafe;
+      background: rgba(15, 23, 42, 0.2);
+      display: inline-block;
+      text-align: left;
+      border-radius: 8px;
+    }
+
+    section {
+      padding: 52px 0;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: 1.9rem;
+      color: #0f172a;
+    }
+
+    .section-intro {
+      margin: 0 0 26px;
+      color: var(--muted);
+      max-width: 900px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--primary-dark);
+      font-size: 1.08rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li { margin-bottom: 7px; }
+
+    .highlight {
+      background: #ecfeff;
+      border: 1px solid #a5f3fc;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+
+    .faq-item h4 {
+      margin: 0 0 6px;
+      color: #0f766e;
+    }
+
+    .cta {
+      background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 100%);
+      color: #eff6ff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 28px rgba(30, 58, 138, 0.28);
+    }
+
+    .cta h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.9rem;
+    }
+
+    .cta p {
+      margin: 0 0 14px;
+      color: #dbeafe;
+      max-width: 900px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 11px 16px;
+      border-radius: 8px;
+      background: #22d3ee;
+      color: #082f49;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .btn:hover { background: #67e8f9; }
+
+    footer {
+      text-align: center;
+      padding: 18px 0 26px;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">DEV4ED</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#materials">Learning Materials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Empowering Minds, Transforming Lives</h1>
+      <p>
+        Education is the foundation of a better future. Everyone deserves access to
+        inclusive, equitable, and quality education regardless of age, gender, economic status, or location.
+      </p>
+      <div class="quote">
+        “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
+        — Malcolm X
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Quality Education</h2>
+      <p class="section-intro">
+        Sustainable Development Goal 4 (SDG 4) aims to ensure inclusive and equitable quality education and promote
+        lifelong learning opportunities for all. Quality education does more than place learners in school—it develops
+        critical thinking, creativity, communication, problem-solving skills, digital literacy, and future readiness.
+      </p>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Our Vision</h3>
+          <p>
+            To create a world where every learner has access to quality education that inspires innovation,
+            builds character, and empowers individuals to become responsible global citizens.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Our Mission</h3>
+          <ul>
+            <li>Provide accessible educational resources for all learners.</li>
+            <li>Promote equal opportunities regardless of background.</li>
+            <li>Encourage lifelong learning and continuous skill development.</li>
+            <li>Support digital and technology-enhanced education.</li>
+            <li>Build partnerships that strengthen education in communities.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Why Quality Education Matters</h2>
+      <div class="card-grid">
+        <article class="card"><h3>📖 Literacy Growth</h3><p>Improves literacy and numeracy skills for stronger learning foundations.</p></article>
+        <article class="card"><h3>💼 Better Opportunities</h3><p>Increases employability, career pathways, and financial stability.</p></article>
+        <article class="card"><h3>🌍 Social Impact</h3><p>Reduces poverty and social inequality while building resilient communities.</p></article>
+        <article class="card"><h3>❤️ Well-being</h3><p>Promotes health, informed decisions, and responsible personal choices.</p></article>
+        <article class="card"><h3>🤝 Inclusion</h3><p>Encourages peace, tolerance, social inclusion, and global understanding.</p></article>
+        <article class="card"><h3>💡 Innovation</h3><p>Fosters creativity, entrepreneurship, and technology-driven progress.</p></article>
+        <article class="card"><h3>🌱 Sustainability</h3><p>Supports environmental awareness and sustainable development goals.</p></article>
+        <article class="card"><h3>👨‍💻 Digital Readiness</h3><p>Prepares learners for the digital economy and future jobs.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="container">
+      <h2 class="section-title">Our Programs</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Digital Learning</h3>
+          <p>Access online lessons, videos, e-books, and interactive learning materials anytime and anywhere.</p>
+        </article>
+        <article class="card">
+          <h3>Scholarship Assistance</h3>
+          <p>Discover scholarships, financial aid, and educational grants to support academic goals.</p>
+        </article>
+        <article class="card">
+          <h3>Skills Development</h3>
+          <p>Join workshops and training in leadership, communication, programming, and entrepreneurship.</p>
+        </article>
+        <article class="card">
+          <h3>Community Outreach</h3>
+          <p>Participate in literacy campaigns, tutoring, and donation drives for underserved communities.</p>
+        </article>
+        <article class="card">
+          <h3>Career Development</h3>
+          <p>Receive counseling, resume support, interview preparation, and professional guidance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container two-col">
+      <div class="highlight">
+        <h2 class="section-title">Our Objectives</h2>
+        <ul>
+          <li>Increase access to quality education.</li>
+          <li>Promote inclusive and safe learning environments.</li>
+          <li>Improve digital literacy among students.</li>
+          <li>Encourage innovation through education.</li>
+          <li>Support teachers with resources and training.</li>
+          <li>Foster lifelong learning for all ages.</li>
+        </ul>
+      </div>
+      <div class="highlight">
+        <h2 class="section-title">Benefits of Education</h2>
+        <ul>
+          <li>Achieve academic excellence and confidence.</li>
+          <li>Develop critical thinking and problem-solving.</li>
+          <li>Improve financial stability and career readiness.</li>
+          <li>Become active, responsible members of society.</li>
+          <li>Solve real-world problems creatively.</li>
+          <li>Contribute to sustainable development.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Success Stories</h2>
+      <p class="section-intro">
+        Every learner has the potential to succeed. Through dedication, access to educational resources, and
+        community support, students can overcome challenges, achieve their goals, and inspire others to pursue education.
+      </p>
+    </div>
+  </section>
+
+  <section id="materials">
+    <div class="container">
+      <h2 class="section-title">📚 Learning Materials</h2>
+      <p class="section-intro">
+        Explore educational resources designed to support learners of all ages and strengthen practical skills.
+      </p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>📖 E-Books</h3>
+          <ul>
+            <li>Mathematics Fundamentals</li>
+            <li>English Grammar and Writing</li>
+            <li>Science Concepts</li>
+            <li>Philippine History</li>
+            <li>Computer Fundamentals</li>
+            <li>Financial Literacy</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>🎥 Video Lessons</h3>
+          <ul>
+            <li>Mathematics Tutorials</li>
+            <li>English Communication Skills</li>
+            <li>Basic Science Experiments</li>
+            <li>Programming Basics (HTML, CSS, Java, Python)</li>
+            <li>Study Techniques and Time Management</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>📝 Practice Exercises</h3>
+          <ul>
+            <li>Interactive Quizzes</li>
+            <li>Worksheets</li>
+            <li>Mock Examinations</li>
+            <li>Reading Comprehension Activities</li>
+            <li>Coding Challenges</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>💻 Digital Resources</h3>
+          <ul>
+            <li>Online Class Modules</li>
+            <li>Presentation Slides</li>
+            <li>Educational Infographics</li>
+            <li>Downloadable PDF Notes</li>
+            <li>Interactive Learning Activities</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="two-col" style="margin-top: 18px;">
+        <div class="card">
+          <h3>📚 Recommended Subjects</h3>
+          <ul>
+            <li>Mathematics</li>
+            <li>Science</li>
+            <li>English</li>
+            <li>Filipino</li>
+            <li>Social Studies</li>
+            <li>Information and Communications Technology (ICT)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🎯 Learning Objectives</h3>
+          <ul>
+            <li>Improve academic performance.</li>
+            <li>Strengthen critical thinking and problem-solving.</li>
+            <li>Build digital literacy and technology skills.</li>
+            <li>Enhance communication and collaboration.</li>
+            <li>Prepare for higher education and future careers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top: 18px;">
+        <div class="card">
+          <h3>🌟 Featured Resources</h3>
+          <ul>
+            <li>Beginner's Guide to Computer Programming</li>
+            <li>Introduction to Digital Literacy</li>
+            <li>Effective Study Habits</li>
+            <li>Critical Thinking Activities</li>
+            <li>Career Readiness Guide</li>
+            <li>Basic Financial Literacy</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>📥 Download Center</h3>
+          <ul>
+            <li>PDF Learning Modules</li>
+            <li>Worksheets</li>
+            <li>Review Notes</li>
+            <li>Practice Tests</li>
+            <li>Activity Sheets</li>
+            <li>Study Guides</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h4>Who can benefit from this platform?</h4>
+        <p>Students, teachers, parents, professionals, and lifelong learners.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is the learning material free?</h4>
+        <p>Many educational resources are freely available, while some specialized programs may require registration.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I volunteer?</h4>
+        <p>Yes. Volunteers can tutor students, mentor learners, organize educational events, and donate learning materials.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="container">
+      <div class="cta">
+        <h2>Join Our Mission</h2>
+        <p>
+          Education changes lives. Together, we can create opportunities, inspire future leaders, and build stronger
+          communities through learning. Whether you're a student, educator, parent, or volunteer, your support can make a lasting impact.
+        </p>
+        <p>Together, let's make quality education accessible for everyone. 📚🌍</p>
+        <a class="btn" href="#about">Start Exploring</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 DEV4ED | Sustainable Development Goal 4: Quality Education
+    </div>
+  </footer>
+</body>
+</html>
